@@ -1,8 +1,8 @@
 const Discord = require("discord.js")
-
 const client = new Discord.Client();
-
 var prefix = "l"
+
+
 
 client.on('message', function(message) {
     const myID = "411588634093944832";
@@ -48,7 +48,6 @@ client.on('message', function(message) {
           message.delete(5000);
         });
     } else if(message.content.startsWith(prefix + "setavatar")) {
-
                         if(message.author.id !== myID) return;
         client.user.setAvatar(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
@@ -58,7 +57,5 @@ client.on('message', function(message) {
         });
     }
 });
-
-
 
 client.login(process.env.BOT_TOKEN);
